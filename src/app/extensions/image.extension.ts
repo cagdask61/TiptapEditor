@@ -47,8 +47,6 @@ export const ImageExtension = Image.extend({
                         startWidth = container.offsetWidth;
                         startHeight = container.offsetHeight;
 
-                        console.log(index);
-
                         const onMouseMove = (mouseMoveEvent: MouseEvent) => {
                             if (!isResizing)
                                 return;
