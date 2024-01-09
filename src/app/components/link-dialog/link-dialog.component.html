@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Bağlantı Oluştur</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Bağlantı</mat-label>
+        <input matInput type="text" [(ngModel)]="url">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <div class="w-full h-10 flex flex-row items-center justify-center">
+        <button mat-button [mat-dialog-close]="false" color="warn">İptal</button>
+        <button mat-button [mat-dialog-close]="url" cdkFocusInitial color="primary">Oluştur</button>
+    </div>
+</div>

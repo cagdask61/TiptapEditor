@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$TiptapEditor-primary: mat.define-palette(mat.$indigo-palette);
+$TiptapEditor-accent: mat.define-palette(mat.$yellow-palette, A100, A400);
+
+$TiptapEditor-warn: mat.define-palette(mat.$red-palette);
+
+$TiptapEditor-theme: mat.define-light-theme((color: (primary: $TiptapEditor-primary,
+        accent: $TiptapEditor-accent,
+        warn: $TiptapEditor-warn,
+      )));
+
+@include mat.all-component-themes($TiptapEditor-theme);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body,
+app-root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+.editor-link {
+  @apply underline cursor-pointer text-blue-600;
+
+  &:hover {
+    @apply text-blue-500;
+  }
+}
+
+div.tiptap.ProseMirror {
+  @apply outline-1 outline-gray-400 outline-offset-4 rounded-b;
+}
+
+
+h1 {
+  @apply block text-[32px] font-bold
+}
+
+h2 {
+  @apply block text-[24px] font-bold
+}
+
+h3 {
+  @apply block text-[18.72px] font-bold
+}
+
+h4 {
+  @apply block text-[16px] font-bold
+}
+
+h5 {
+  @apply block text-[13.28px] font-bold
+}
+
+h6 {
+  @apply block text-[10.72px] font-bold
+}
